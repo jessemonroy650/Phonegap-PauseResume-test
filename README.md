@@ -1,12 +1,6 @@
-# Phonegap-Generic-Boilerplate2
-A generic bare bones boilerplate for PhonegapApps with fastclick.js and zepto.js
+# Phonegap-PauseResume-test #
+a simple test of Phonegaps's events: Pause &amp; Resume
 
-**Additions vs Boilerplate**
+This is **edge**. It may not be the correct API to work off of.
 
-* fastclick.js - removes the 300ms click delay in Android - See: https://github.com/ftlabs/fastclick
-* zepto.js - a jquery-like helper library - See: http://zeptojs.com/
-
-More details in:
-
-https://github.com/jessemonroy650/Phonegap--Generic-Boilerplate
-
+http://docs.phonegap.com/en/edge/cordova_storage_localstorage_localstorage.md.html

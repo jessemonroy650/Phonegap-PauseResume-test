@@ -1,5 +1,5 @@
 //
-//	Date: 2015-07-03
+//    Date: 2015-07-03
 //
 function onButtonClick() {
     alert("button clicked.");
@@ -7,9 +7,19 @@ function onButtonClick() {
 }
 
 var onPause = function() {
-	document.getElementById('content').innerHTML = 'pause';
+    //document.getElementById('content').innerHTML = 'pause';
+    var theValue = document.getElementById('theValue').value;
+    document.getElementById('content').innerHTML = theValue;
+
+    // Put Data to localstorage
+    // persistentStorage.setItem("theValue", theValue);
+    // sessionStorage.setItem("theValue", theValue);
 };
 
 var onResume = function() {
-	document.getElementById('info').innerHTML = 'resume';
+    // Get Data to localstorage
+    // persistentStorage.getItem("theValue");
+    // sessionStorage.getItem("theValue");
+
+    //document.getElementById('info').innerHTML = 'resume';
 };
