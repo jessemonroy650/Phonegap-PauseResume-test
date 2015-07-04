@@ -4,6 +4,8 @@
 function onButtonClick() {
     alert("button clicked.");
     //document.getElementById('info').innerHTML = JSON.stringify(Sysinfo, null, 4);
+    var perAfterResumeValue = persistentStorage.getItem("theValue");
+    document.getElementById('permInfo').innerHTML = perAfterResumeValue;
 }
 
 var onPause = function() {
