@@ -12,14 +12,14 @@ var onPause = function() {
     document.getElementById('content').innerHTML = theValue;
 
     // Put Data to localstorage
-    // persistentStorage.setItem("theValue", theValue);
-    // sessionStorage.setItem("theValue", theValue);
+    persistentStorage.setItem("theValue", theValue);
+    sessionStorage.setItem("theValue", theValue);
 };
 
 var onResume = function() {
     // Get Data to localstorage
-    // persistentStorage.getItem("theValue");
-    // sessionStorage.getItem("theValue");
+    var perAfterResumeValue = persistentStorage.getItem("theValue");
+    var sesAfterResumeValue = sessionStorage.getItem("theValue");
 
-    //document.getElementById('info').innerHTML = 'resume';
+    document.getElementById('info').innerHTML = perAfterResumeValue;
 };
