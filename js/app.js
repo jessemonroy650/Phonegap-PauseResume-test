@@ -2,8 +2,7 @@
 //    Date: 2015-07-03
 //
 function onButtonClick() {
-    alert("button clicked.");
-    //document.getElementById('info').innerHTML = JSON.stringify(Sysinfo, null, 4);
+    //alert("button clicked.");
     var perAfterResumeValue = persistentStorage.getItem("theValue");
     document.getElementById('permInfo').innerHTML = perAfterResumeValue;
 }
