@@ -11,18 +11,17 @@ http://docs.phonegap.com/en/edge/cordova_storage_localstorage_localstorage.md.ht
 
 NOTE: There is a quirk with the iOS implementation.
 
-** Implmented **
+**Implmented**
 
 * window.localStorage
 * setItem()
 * getItem()
 
-** Not Implmented **
+**Not Implmented**
 
 * key()
 * removeItem()
 * clear()
 
-** Not Tested **
-
+**Not Tested**
 * window.sessionStorage
