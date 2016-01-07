@@ -43,8 +43,9 @@ function onButtonClick() {
 }
 
 var onPause = function() {
+    theValue = document.getElementById('theValue').value;
     document.getElementById('lastState').innerHTML = 'paused';
-    document.getElementById('content').innerHTML = document.getElementById('theValue').value;
+    document.getElementById('content').innerHTML   = theValue;
 
     // Put Data to localstorage
     localStorage.setItem("theValue", theValue);
@@ -57,11 +58,12 @@ var onResume = function() {
     },
     3000);
     // Get Data to localstorage
-    document.getElementById('peristentInfo').innerHTML = JSON.stringify(localStorage.getItem("theValue"));
+    document.getElementById('peristentInfo').innerHTML = localStorage.getItem("theValue");
     document.getElementById('sessionInfo').innerHTML   = sessionStorage.getItem("theValue");
 };
 
-var device = {platform:"browser"};
+var device   = {platform:"browser"};
+var theValue = "0";
 
 document.addEventListener("deviceready", onDeviceReady, false);
 
