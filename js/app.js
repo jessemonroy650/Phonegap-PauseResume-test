@@ -43,7 +43,7 @@ function onButtonClick() {
 }
 
 var onPause = function() {
-    document.getElementById('content').innerHTML = 'paused';
+    document.getElementById('lastState').innerHTML = 'paused';
     document.getElementById('content').innerHTML = document.getElementById('theValue').value;
 
     // Put Data to localstorage
@@ -53,7 +53,7 @@ var onPause = function() {
 
 var onResume = function() {
     setTimeout(function() {
-        document.getElementById('content').innerHTML = 'resume';
+        document.getElementById('lastState').innerHTML = 'resume';
     },
     5000);
     // Get Data to localstorage
