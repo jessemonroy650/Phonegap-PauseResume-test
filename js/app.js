@@ -45,11 +45,12 @@ function onButtonClick() {
 var onPause = function() {
     theValue = document.getElementById('theValue').value;
     document.getElementById('lastState').innerHTML = 'paused';
-    document.getElementById('content').innerHTML   = theValue;
-
-    // Put Data to localstorage
-    localStorage.setItem("theValue", theValue);
-    sessionStorage.setItem("theValue", theValue);
+    if (theValue) {
+        document.getElementById('content').innerHTML   = theValue;
+        // Put Data to localstorage
+        localStorage.setItem("theValue", theValue);
+        sessionStorage.setItem("theValue", theValue);
+    }
 };
 
 var onResume = function() {
