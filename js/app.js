@@ -39,7 +39,7 @@ function onDeviceReady() {
 
 function onButtonClick() {
     //alert("button clicked.");
-    document.getElementById('content').innerHTML = window.localStorage.getItem("theValue");
+    document.getElementById('content').innerHTML = localStorage.getItem("theValue");
 }
 
 var onPause = function() {
@@ -47,18 +47,18 @@ var onPause = function() {
     document.getElementById('content').innerHTML = document.getElementById('theValue').value;
 
     // Put Data to localstorage
-    window.localStorage.setItem("theValue", theValue);
-    window.sessionStorage.setItem("theValue", theValue);
+    localStorage.setItem("theValue", theValue);
+    sessionStorage.setItem("theValue", theValue);
 };
 
 var onResume = function() {
     setTimeout(function() {
         document.getElementById('lastState').innerHTML = 'resume';
     },
-    5000);
+    3000);
     // Get Data to localstorage
-    document.getElementById('peristentInfo').innerHTML = window.localStorage.getItem("theValue");
-    document.getElementById('sessionInfo').innerHTML   = window.sessionStorage.getItem("theValue");
+    document.getElementById('peristentInfo').innerHTML = localStorage.getItem("theValue");
+    document.getElementById('sessionInfo').innerHTML   = sessionStorage.getItem("theValue");
 };
 
 var device = {platform:"browser"};
