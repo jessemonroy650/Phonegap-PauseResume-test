@@ -38,13 +38,13 @@ function onDeviceReady() {
 
 
 function onButtonClick() {
-    alert("button clicked.");
+    //alert("button clicked.");
     document.getElementById('content').innerHTML = window.localStorage.getItem("theValue");
 }
 
 var onPause = function() {
-    var theValue = document.getElementById('theValue').value;
-    document.getElementById('content').innerHTML = theValue;
+    document.getElementById('content').innerHTML = 'paused';
+    document.getElementById('content').innerHTML = document.getElementById('theValue').value;
 
     // Put Data to localstorage
     window.localStorage.setItem("theValue", theValue);
@@ -52,7 +52,10 @@ var onPause = function() {
 };
 
 var onResume = function() {
-    alert('got onResume');
+    setTimeout(function() {
+        document.getElementById('content').innerHTML = 'resume';
+    },
+    5000);
     // Get Data to localstorage
     document.getElementById('peristentInfo').innerHTML = window.localStorage.getItem("theValue");
     document.getElementById('sessionInfo').innerHTML   = window.sessionStorage.getItem("theValue");
@@ -62,4 +65,4 @@ var device = {platform:"browser"};
 
 document.addEventListener("deviceready", onDeviceReady, false);
 
-document.addEventListener("DOMContentLoaded", onDeviceReady, false);
+//document.addEventListener("DOMContentLoaded", onDeviceReady, false);
