@@ -6,19 +6,22 @@
     <link rel="stylesheet" href="css/buttons.css" />
     <link rel="stylesheet" href="css/app.css" />
 </head>
-<body onload="onLoad()">
+<body >
 <div id=header class="button button-block button-large">
     <img align=left src=images/favicon-48x48.png>
     PG Pause/Resume Test
-    <button id=exitApp onclick='navigator.app.exitApp()' class="button button-pill button-primary button-large">Exit</button>
+    <button id=exitApp onclick='' class="button button-pill button-primary button-large">Exit</button>
 </div>
 
 <input id=theValue type=text placeholder="@data #1234!" /> <br />
-<div id=content style="margin:1em;">content</div>
-<button onclick='onButtonClick()' class="button button-pill button-action button-large">button</button>
-<pre id=info>pre</pre>
 <hr />
-<pre id=permInfo>permInfo</pre>
+content <span id=content>contentInfo</span>
+<hr />
+<button id=theButton class="button button-pill button-action button-large">Get Persistent</button>
+<hr />
+session <span id=sessionInfo>sessionInfo</span>
+<hr />
+peristent <span id=peristentInfo>peristentInfo</span>
 
 <div class="copyright" style="padding:5px;align:left;font-style:italic;font-size:small;">
     <span id=copyright>Created by Jesus Monroy, Jr. &copy; 2015</span>
@@ -28,7 +31,5 @@
     <script type="text/javascript" charset="utf-8" src="js/fastclick.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/zepto-1.1.6.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
-    <script type="text/javascript">
-    // Wait for PhoneGap to load
-    </script>
+    <script type="text/javascript"></script>
 </html>
