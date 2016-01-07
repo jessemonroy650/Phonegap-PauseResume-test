@@ -49,8 +49,8 @@ var onPause = function() {
         document.getElementById('content').innerHTML   = theValue;
         // Put Data to localstorage
         localStorage.setItem("theValue", theValue);
-        sessionStorage.setItem("theValue", theValue);
     }
+    sessionStorage.setItem("theValue", myDate.getEpoch());
 };
 
 var onResume = function() {
@@ -63,9 +63,22 @@ var onResume = function() {
     document.getElementById('sessionInfo').innerHTML   = sessionStorage.getItem("theValue");
 };
 
+var myDate = {
+    now : new Date(),
+    utcNow    : (new Date()).toUTCString(),
+    getEpoch : function() { return (new Date()).getTime(); },
+    getToday : function() { return (new Date()).toUTCString(); }
+}
+
 var device   = {platform:"browser"};
 var theValue = "0";
 
-document.addEventListener("deviceready", onDeviceReady, false);
+if ('product' in navigator) {
+    if (navigator.product === "Gecko" ) {
+        document.addEventListener("DOMContentLoaded", onDeviceReady, false);
+    }
+    document.getElementById("demo").innerHTML = navigator.product;
+} else {
+    document.addEventListener("deviceready", onDeviceReady, false);
+}
 
-//document.addEventListener("DOMContentLoaded", onDeviceReady, false);
