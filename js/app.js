@@ -73,12 +73,12 @@ var myDate = {
 var device   = {platform:"browser"};
 var theValue = "0";
 
-if ('product' in navigator) {
-    if (navigator.product === "Gecko" ) {
-        document.addEventListener("DOMContentLoaded", onDeviceReady, false);
-    }
-    document.getElementById("demo").innerHTML = navigator.product;
+// Thanks http://www.quirksmode.org/js/detect.html
+if ('mozApps' in navigator) {
+    document.addEventListener("DOMContentLoaded", onDeviceReady, false);
+    document.getElementById("demo").innerHTML = "got mozApps";
 } else {
     document.addEventListener("deviceready", onDeviceReady, false);
+    document.getElementById("demo").innerHTML = JSON.stringify(navigator);
 }
 
