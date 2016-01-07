@@ -57,7 +57,7 @@ var onResume = function() {
     },
     3000);
     // Get Data to localstorage
-    document.getElementById('peristentInfo').innerHTML = localStorage.getItem("theValue");
+    document.getElementById('peristentInfo').innerHTML = JSON.stringify(localStorage.getItem("theValue"));
     document.getElementById('sessionInfo').innerHTML   = sessionStorage.getItem("theValue");
 };
 
